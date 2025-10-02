@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "./utils/LenisProvider";
-import { PopupProvider } from "@/Context/PopupContext";
+import { PopupProvider } from "@/context/PopupContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

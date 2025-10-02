@@ -5,7 +5,7 @@ import styles from "./Navbar.module.css"
 import Image from "next/image"
 import logoDark from "@/public/images/logo-dark.png"
 import logoWhite from "@/public/images/logo.png"
-import { usePopup } from "@/Context/PopupContext";
+import { usePopup } from "@/context/PopupContext";
 
 
 

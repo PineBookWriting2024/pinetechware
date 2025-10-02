@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Cta.module.css";
 
-import { usePopup } from "@/Context/PopupContext";
+import { usePopup } from "@/context/PopupContext";
 
 
 

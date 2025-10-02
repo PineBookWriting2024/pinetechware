@@ -1,5 +1,5 @@
 import React from 'react'
-import { usePopup } from "@/Context/PopupContext";
+import { usePopup } from "@/context/PopupContext";
 
 
 const Trigger = () => {

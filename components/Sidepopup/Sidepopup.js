@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
-import { usePopup } from "@/Context/PopupContext"; 
+import { usePopup } from "@/context/PopupContext"; 
 
 export default function Sidepopup() {
   const { isOpen, closePopup } = usePopup(); 

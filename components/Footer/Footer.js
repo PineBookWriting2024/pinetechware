@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import logo from "@/public/images/logo.png";
 import styles from './Footer.module.css'
+import Link from "next/link";
 
 
 const Footer = () => {
@@ -20,24 +21,24 @@ const Footer = () => {
                                 <p className=" font-medium leading-6 text-neutral-500 flex items-center text-xs lg:text-sm">Company</p>
                                 <ul className="mt-2 md:mt-4 ">
                                     <li>
-                                        <a className={styles.menu_links} href="/about/">
+                                        <Link className={styles.menu_links} href="/about/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 leading-7 md:leading-12"><span>About Us</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/about/testimonial/">
+                                        <Link className={styles.menu_links}  href="/about/testimonial/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Testimonials</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/about/process/">
+                                        <Link className={styles.menu_links}  href="/about/process/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Process</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/contact/">
+                                        <Link className={styles.menu_links}  href="/contact/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Contact</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -47,24 +48,24 @@ const Footer = () => {
                                 <p className=" font-medium leading-6 text-neutral-500 flex items-center text-xs lg:text-sm">Resources</p>
                                 <ul className="mt-2 md:mt-4 ">
                                     <li>
-                                        <a className={styles.menu_links}  href="/blog/">
+                                        <Link className={styles.menu_links}  href="/blog/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Blog</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/events/">
+                                        <Link className={styles.menu_links}  href="/events/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Events</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/press-release/">
+                                        <Link className={styles.menu_links}  href="/press-release/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Press Release</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/work/">
+                                        <Link className={styles.menu_links}  href="/work/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Work</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -74,24 +75,24 @@ const Footer = () => {
                                 <p className=" font-medium leading-6 text-neutral-500 flex items-center text-xs lg:text-sm">Services</p>
                                 <ul className="mt-2 md:mt-4 ">
                                     <li>
-                                        <a className={styles.menu_links}  href="/mobile-app-development/">
+                                        <Link className={styles.menu_links}  href="/mobile-app-development/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Mobile App</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/game-development/">
+                                        <Link className={styles.menu_links}  href="/game-development/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Game Development</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/blockchain-development/">
+                                        <Link className={styles.menu_links}  href="/blockchain-development/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Blockchain Development</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/artificial-intelligence/">
+                                        <Link className={styles.menu_links}  href="/artificial-intelligence/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>AI Development</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -101,24 +102,24 @@ const Footer = () => {
                                 <p className=" font-medium leading-6 text-neutral-500 flex items-center text-xs lg:text-sm">Insights</p>
                                 <ul className="mt-2 md:mt-4 ">
                                     <li>
-                                        <a href="/university/" target="_blank" className={styles.menu_links} >
+                                        <Link href="/university/" target="_blank" className={styles.menu_links} >
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>University</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/careers/" target="_blank" className={styles.menu_links} >
+                                        <Link href="/careers/" target="_blank" className={styles.menu_links} >
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Careers</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className={styles.menu_links}  href="/about/manifesto/">
+                                        <Link className={styles.menu_links}  href="/about/manifesto/">
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Manifesto</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/culture-book.pdf" className={styles.menu_links} >
+                                        <Link href="/culture-book.pdf" className={styles.menu_links} >
                                             <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-medium text-white hover:text-[#3bb9e1] duration-500 menu_links leading-7 md:leading-12"><span>Culture Book</span></p>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -164,61 +165,61 @@ const Footer = () => {
                         <div>
                             <p className=" font-medium leading-6 text-neutral-500 flex items-center mb-4 text-xs lg:text-sm">Contact</p>
                             <ul className="mt-4 ">
-                                <li><a href="tel:866-978-2220" className="text-white font-medium menu_links text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-[#3bb9e1] duration-500">866-978-2220</a></li>
-                                <li><a href="mailto:info@cubix.co" className="text-white font-medium menu_links text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-[#3bb9e1] duration-500">info@cubix.co</a></li>
+                                <li><Link href="tel:866-978-2220" className="text-white font-medium menu_links text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-[#3bb9e1] duration-500">866-978-2220</Link></li>
+                                <li><Link href="mailto:info@cubix.co" className="text-white font-medium menu_links text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-[#3bb9e1] duration-500">info@cubix.co</Link></li>
                             </ul>
                         </div>
                         <div className="hidden sm:flex flex-col">
-                            <a aria-current="page" className="justify-center mb-5 flex" href="/">
+                            <Link aria-current="page" className="justify-center mb-5 flex" href="/">
                             <Image src={logo} width="100" height="30" className="block" alt="logo"/>
-                            </a>
+                            </Link>
 
                             <p className=" text-neutral-500 text-center block mb-3.5 text-xs lg:text-sm">© 2025 Cubix. All Rights Reserved</p>
                             <div className="flex gap-2 items-center">
                                 <p className=" text-neutral-500 text-center block text-xs lg:text-sm">Content protected by DMCA.com</p>
-                                {/* <a href="https://www.dmca.com/Protection/Status.aspx?ID=e24518dd-1572-488a-a06f-e64b8b27d270&amp;refurl=https://www.cubix.co/" target="_blank" title="DMCA.com Protection Status" className="dmca-badge">
+                                {/* <Link href="https://www.dmca.com/Protection/Status.aspx?ID=e24518dd-1572-488a-a06f-e64b8b27d270&amp;refurl=https://www.cubix.co/" target="_blank" title="DMCA.com Protection Status" className="dmca-badge">
                                 
                                 <Image src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-06.png?ID=e24518dd-1572-488a-a06f-e64b8b27d270" alt="DMCA.com Protection Status" width="120"/>
-                                </a> */}
+                                </Link> */}
                             </div>
                         </div>
                         <div className="flex flex-col items-end">
-                            <a aria-current="page" className="flex sm:hidden mb-3 sm:mb-0" href="/">
+                            <Link aria-current="page" className="flex sm:hidden mb-3 sm:mb-0" href="/">
                             <Image src={logo} width="100" height="30" className="2xl:w-24 block" alt="logo"/>
 
-                            </a>
+                            </Link>
                             <div className="flex flex-col mb-2 sm:mb-5 space-y-4">
                                 <div className="flex justify-end md:space-x-4 space-x-2.5">
-                                    <a href="/" target="_blank">
+                                    <Link href="/" target="_blank">
                                     <FaLinkedinIn className="w-5 md:w-7 h-5 md:h-7 object-cover hover:text-white duration-500 text-[#3bb9e1]"/>
 
 
-                                    </a>
+                                    </Link>
 
-                                    <a href="" target="_blank">
+                                    <Link href="" target="_blank">
                                     <FaXTwitter className="w-5 md:w-7 h-5 md:h-7 object-cover hover:text-white duration-500 text-[#3bb9e1]"/>
-                                    </a>
+                                    </Link>
 
 
-                                    <a href="" target="_blank" >
+                                    <Link href="" target="_blank" >
                                     <FaFacebookF className="w-5 md:w-7 h-5 md:h-7 object-cover hover:text-white duration-500 text-[#3bb9e1]"/>
-                                    </a>
+                                    </Link>
 
-                                    <a href="" target="_blank">
+                                    <Link href="" target="_blank">
                                     <FaYoutube className="w-5 md:w-7 h-5 md:h-7 object-cover hover:text-white duration-500 text-[#3bb9e1]"/>
 
 
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="flex">
-                                <a href="/privacy-policy/">
+                                <Link href="/privacy-policy/">
                                     <p className="menu_links text-neutral-500 hidden sm:block text-xs lg:text-sm">Privacy Policy</p>
-                                </a>
+                                </Link>
                                 <p className="menu_links text-neutral-500 hidden sm:block text-xs lg:text-sm">|</p>
-                                <a href="/terms-of-use/">
+                                <Link href="/terms-of-use/">
                                     <p className="menu_links text-neutral-500 hidden sm:block text-xs lg:text-sm">Terms &amp; Conditions</p>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -20,8 +20,10 @@ export default function Cta() {
                             <button
                                 className={`${styles.buttonChange} ${styles.buttonChangeBlack }   bg-black text-white 2xl:w-[180px] items-center px-6 md:px-11 h-[40px] md:h-12 border-transparent rounded-full font-extrabold text-sm ` } onClick={openPopup}
                             >
+
                                 <span className="pb-[3px] md:pb-1.5">Get a Quote</span>
                                 <span className="pb-[3px] md:pb-1.5">Get a Quote</span>
+                                
                             </button>
                         </div>
                     </div>

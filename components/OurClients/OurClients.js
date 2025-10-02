@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from "next/link";
 import styles from "./OurClients.module.css";
 import { FaStar } from "react-icons/fa6";
 import Img1 from "@/public/images/client1.svg";
@@ -60,9 +61,9 @@ const OurClients = () => {
 
 
                                 <div className="user-data">
-                                    <a className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
                                         <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </a>
+                                    </Link>
                                 </div>
 
                             </div>
@@ -92,9 +93,9 @@ const OurClients = () => {
 
 
                                 <div className="user-data">
-                                    <a className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
                                         <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </a>
+                                    </Link>
                                 </div>
 
                             </div>
@@ -124,9 +125,9 @@ const OurClients = () => {
 
 
                                 <div className="user-data">
-                                    <a className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
                                         <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </a>
+                                    </Link>
                                 </div>
 
                             </div>
@@ -156,9 +157,9 @@ const OurClients = () => {
 
 
                                 <div className="user-data">
-                                    <a className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
                                         <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </a>
+                                    </Link>
                                 </div>
 
                             </div>

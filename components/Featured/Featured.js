@@ -50,14 +50,14 @@ export default function Featured() {
                                 <h2 className="font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>Our Success Stories.</span></h2>
                             </div>
                             
-                            <a className=" mt-6 text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-300 ease-in-out hover:font-semibold" href="/work/">
+                            <Link className=" mt-6 text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-300 ease-in-out hover:font-semibold" href="/work/">
                                 More case studies
                                 <div className="transform group-hover:translate-x-2 transition-all duration-300 ease-in-out">
                                     {/* <Image src={Arrow} className="hidden group-hover:block w-5 lg:w-full" alt="link arrow" /> */}
                                     <IoIosArrowRoundForward className="text-black text-5xl" />
 
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 mx-auto mt-12 lg:mt-20 gap-x-28">
                             <article className=" mt-14 md:mt-[0rem] first:mt-0  inline-block w-full CaseStudyImage">
@@ -76,22 +76,22 @@ export default function Featured() {
                                     </div>
                                 </div>
                                 <div className="max-w-full lg:max-w-xl">
-                                    <a className="flex justify-between items-center pt-[20px] pb-[10px] cursor-pointer" href="#">
+                                    <Link className="flex justify-between items-center pt-[20px] pb-[10px] cursor-pointer" href="#">
                                         <div className="h-[58px] w-[151px] flex">
                                             <Image className="object-contain" src={Icon1} loading="lazy" alt="brand" /></div>
-                                    </a>
+                                    </Link>
                                     <div className="group relative">
-                                        <a className="group-hover:underline underline-offset-[9px] decoration-1" href="#">
+                                        <Link className="group-hover:underline underline-offset-[9px] decoration-1" href="#">
                                             <h3 className=" mb-[20px] font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">A Social Networking for Pets and Pet Owners</h3>
-                                        </a>
-                                        <a className=" text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-500 ease-in-out hover:font-semibold" href="#">
+                                        </Link>
+                                        <Link className=" text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-500 ease-in-out hover:font-semibold" href="#">
                                             <p className=" font-medium text-sm lg:text-md xl:text-lg 2xl:text-xl">brand is a trailblazing social networking app dedicated to pets and their owners.</p>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </article>
                             <article className=" mt-14 md:mt-[8rem]  inline-block w-full CaseStudyImage">
-                                {/* <a className="group" href="/"> */}
+                                {/* <Link className="group" href="/"> */}
                                     <div className="relative">
                                         <div className=" h-[380px] md:h-[670px] rounded-3xl hidden lg:block " style={{ position: 'relative', overflow: 'hidden', width: '100%' }}>
                                             <div className="transition ease-out duration-[500ms]" style={{ position: 'absolute', inset: '-30px 0px', willChange: 'transform', transform: 'translateY(19.597px)' }}>
@@ -124,30 +124,30 @@ export default function Featured() {
                                 {/* </a> */}
                             </article>
                             <article className=" mt-14 md:-mt-[0rem] lg:-mt-[8rem]  inline-block w-full CaseStudyImage">
-                                {/* <a className="group" href="/"> */}
+                                {/* <Link className="group" href="/"> */}
                                     <div className="relative">
                                         <div className=" h-[380px] md:h-[670px] rounded-3xl hidden lg:block " style={{ position: 'relative', overflow: 'hidden', width: '100%' }}>
                                             <div className="transition ease-out duration-[500ms]" style={{ position: 'absolute', inset: '-30px 0px', willChange: 'transform', transform: 'translateY(19.597px)' }}>
                                                 <span>
                                                     <Image src={Img3} className="w-full object-cover h-full" loading="lazy" alt="party-shark" /></span></div></div><div className="rounded-3xl lg:hidden block overflow-hidden"><span><Image src={Img3} className="w-full object-cover h-full" loading="lazy" alt="party-shark" /></span></div></div>
                                     <div className="max-w-full lg:max-w-xl">
-                                        <a className="flex justify-between items-center pt-[20px] pb-[10px] cursor-pointer" href="/">
+                                        <Link className="flex justify-between items-center pt-[20px] pb-[10px] cursor-pointer" href="/">
                                             <div className="h-[58px] w-[151px] flex">
                                                 <Image className="object-contain" src={Icon3} loading="lazy" alt="party-shark" /></div>
-                                        </a>
+                                        </Link>
                                         <div className="group relative">
-                                            <a className="group-hover:underline underline-offset-[9px] decoration-1" href="/">
+                                            <Link className="group-hover:underline underline-offset-[9px] decoration-1" href="/">
                                                 <h3 className=" mb-[20px] font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">A Social Networking and Event Management App</h3>
-                                            </a>
-                                            <a className=" text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-500 ease-in-out hover:font-semibold" href="/">
+                                            </Link>
+                                            <Link className=" text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-500 ease-in-out hover:font-semibold" href="/">
                                                 <p className=" font-medium text-sm lg:text-md xl:text-lg 2xl:text-xl">App designed for young partygoers, specializes in facilitating the organization &amp; discovery of house parties.</p>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 {/* </a> */}
                             </article>
                             <article className="mt-14 md:mt-[8rem]  inline-block w-full CaseStudyImage">
-                                {/* <a className="group" href="/"> */}
+                                {/* <Link className="group" href="/"> */}
                                     <div className="relative">
                                         <div className="h-[380px] md:h-[538px] rounded-3xl hidden lg:block" style={{ position: 'relative', overflow: 'hidden', width: '100%' }}>
                                             <div className="transition ease-out duration-[500ms]" style={{ position: 'absolute', inset: '-30px 0px', willChange: 'transform', transform: 'translateY(19.597px)' }}>

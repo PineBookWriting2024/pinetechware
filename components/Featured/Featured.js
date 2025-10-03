@@ -195,7 +195,7 @@ export default function Featured() {
           <div className="flex flex-col gap-y-2 w-max">
             <span className="cursor-pointer group inline-flex flex-col gap-y-2">
               <div className="inline-flex">
-                  <span className="group-hover:text-[#2ED06E] font-bold text-4xl xl:text-5xl 2xl:text-6xl">
+                  <span className="group-hover:text-[#3BB9E1] font-bold text-4xl xl:text-5xl 2xl:text-6xl">
                     {startCounter && (
                       <CountUp
                         start={0}
@@ -217,7 +217,7 @@ export default function Featured() {
           <div className="flex flex-col gap-y-2 w-max">
             <span className="cursor-pointer group inline-flex flex-col gap-y-2">
               <div className="inline-flex">
-                  <span className="group-hover:text-[#2ED06E] font-bold text-4xl xl:text-5xl 2xl:text-6xl">
+                  <span className="group-hover:text-[#3BB9E1] font-bold text-4xl xl:text-5xl 2xl:text-6xl">
                     {startCounter && (
                       <CountUp
                         start={0}
@@ -239,7 +239,7 @@ export default function Featured() {
           <div className="flex flex-col gap-y-2 w-max md:pb-20">
             <span className="cursor-pointer group inline-flex flex-col gap-y-2">
               <div className="inline-flex">
-                     <span className="group-hover:text-[#2ED06E] font-bold text-4xl xl:text-5xl 2xl:text-6xl">
+                     <span className="group-hover:text-[#3BB9E1] font-bold text-4xl xl:text-5xl 2xl:text-6xl">
                     {startCounter && (
                       <CountUp
                         start={0}

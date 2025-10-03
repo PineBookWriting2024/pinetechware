@@ -17,9 +17,10 @@ import Product from "@/components/Product/Product";
 import Highlights from "@/components/Highlights/Highlights";
 import { useRef, useEffect } from "react";  // 👈 ye add karo
 import { gsap } from "gsap"; // 👈 ye add karo
+import Head from "next/head";
 
 export default function Home() {
-   const btnRef = useRef(null);
+  const btnRef = useRef(null);
 
   useEffect(() => {
     const btn = btnRef.current;
@@ -67,6 +68,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        {/* <title>Home - My Software Company</title>
+        <meta name="description" content="We build software solutions..." /> */}
+      </Head>
       <Navbar />
       <main className="h-[90vh] bg-gradient-to-b from-gray-900 to-gray-600 text-white">
         <section className="pt-[10%]">
@@ -87,15 +92,15 @@ export default function Home() {
 
             <div className="ball text-right flex justify-end">
               <div ref={btnRef} className="bg-[#3BB9E1] duration-100 hover:bg-[#fff] rounded-full h-[150px] w-[150px] flex flex-col items-center justify-center hover:text-black text-white mt-8 cursor-pointer shadow-md"
-            >
-              <MdArrowOutward className="text-black text-5xl mb-2" />
-              <b className="mb-0 font-bold mt-2 xl:leading-5 leading-4 text-center">
-                Let’s Discuss <br /> Your Idea
-              </b>
-            </div>
+              >
+                <MdArrowOutward className="text-black text-5xl mb-2" />
+                <b className="mb-0 font-bold mt-2 xl:leading-5 leading-4 text-center">
+                  Let’s Discuss <br /> Your Idea
+                </b>
+              </div>
             </div>
 
-            
+
           </div>
         </section>
 

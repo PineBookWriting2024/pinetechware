@@ -2,6 +2,7 @@ import React from 'react'
 import { usePopup } from "@/context/PopupContext";
 
 
+
 const Trigger = () => {
     const { openPopup, closePopup, isOpen } = usePopup();
 

@@ -125,4 +125,7 @@ html, body {
 
 
 
-
+.service-module--heroGradient--bed34 {
+    background: #fff;
+    background: radial-gradient(circle, #fff 0, #f0f0f0 100%);
+}

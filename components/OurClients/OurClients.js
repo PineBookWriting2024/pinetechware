@@ -6,11 +6,75 @@ import { FaStar } from "react-icons/fa6";
 import Img1 from "@/public/images/client1.svg";
 import Img2 from "@/public/images/client2.svg";
 import Img3 from "@/public/images/hotset.svg";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
-
+// Register ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 const OurClients = () => {
+
+    const reviews = [
+        {
+            text: `"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."`,
+            initials: "JD",
+            bgColor: "#2ED06E",
+            name: "Jackie Dallas, Director",
+            stars: 5,
+            img: Img3,
+        },
+        {
+            text: `"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."`,
+            initials: "JD",
+            bgColor: "#2ED06E",
+            name: "Jackie Dallas, Director",
+            stars: 5,
+            img: Img3,
+        },
+        {
+            text: `"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."`,
+            initials: "JD",
+            bgColor: "#2ED06E",
+            name: "Jackie Dallas, Director",
+            stars: 5,
+            img: Img3,
+        },
+        {
+            text: `"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."`,
+            initials: "JD",
+            bgColor: "#2ED06E",
+            name: "Jackie Dallas, Director",
+            stars: 5,
+            img: Img3,
+        },
+    ];
+
+
+
+    useEffect(() => {
+        gsap.utils.toArray(".single-review").forEach((el) => {
+            gsap.fromTo(
+                el,
+                { y: 80, opacity: 0, scale: 0.9 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%", // jab element viewport me aaye
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
+        });
+    }, []);
+
+
     return (
         <div>
 
@@ -37,133 +101,235 @@ const OurClients = () => {
                     </div>
 
                     <div className='flex flex-col gap-y-5 md:gap-y-6 component-height h-fit'>
-                        <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
-                            <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
+                        {/* <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
+                        <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
 
-                            <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
+                        <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
+                        </div>
+
+                        <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
+
+                            <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
+                                <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
+                                <div className=''>
+                                    <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
+                                    <span className='flex mt-2 gap-1'>
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                    </span>
+                                </div>
                             </div>
 
-                            <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
 
-                                <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
-                                    <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
-                                    <div className=''>
-                                        <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
-                                        <span className='flex mt-2 gap-1'>
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
+                            <div className="user-data">
+                                <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
+                                </Link>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
+                        <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
+
+                        <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
+                        </div>
+
+                        <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
+
+                            <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
+                                <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
+                                <div className=''>
+                                    <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
+                                    <span className='flex mt-2 gap-1'>
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div className="user-data">
+                                <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
+                                </Link>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
+                        <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
+
+                        <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
+                        </div>
+
+                        <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
+
+                            <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
+                                <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
+                                <div className=''>
+                                    <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
+                                    <span className='flex mt-2 gap-1'>
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div className="user-data">
+                                <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
+                                </Link>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
+                        <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
+
+                        <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
+                        </div>
+
+                        <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
+
+                            <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
+                                <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
+                                <div className=''>
+                                    <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
+                                    <span className='flex mt-2 gap-1'>
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                        <FaStar className='text-amber-500' />
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div className="user-data">
+                                <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
+                                    <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
+                                </Link>
+                            </div>
+
+                        </div>
+                    </div> */}
+
+
+                        {/* {reviews.map((review, index) => (
+                        <div
+                            key={index}
+                            className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl"
+                        >
+                            <p className="text-lg sm:text-xl md:text-2xl 2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">
+                                {review.text}
+                            </p>
+
+                            <div className="flex justify-between md:items-center items-start flex-col sm:flex-row"></div>
+
+                            <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
+                                <div className="image-here flex justify-center items-center gap-4 w-full md:w-auto">
+                                    <div
+                                        id="profileImage"
+                                        style={{ backgroundColor: review.bgColor }}
+                                        className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold rounded-full text-center flex items-center justify-center text-black"
+                                    >
+                                        {review.initials}
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">
+                                            {review.name}
+                                        </p>
+                                        <span className="flex mt-2 gap-1">
+                                            {Array.from({ length: review.stars }).map((_, i) => (
+                                                <FaStar key={i} className="text-amber-500" />
+                                            ))}
                                         </span>
                                     </div>
                                 </div>
 
-
                                 <div className="user-data">
-                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
-                                        <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
+                                    <Link
+                                        className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0"
+                                        href="/"
+                                    >
+                                        <Image
+                                            className="md:w-full"
+                                            src={review.img}
+                                            width={100}
+                                            height={50}
+                                            alt="hot"
+                                        />
                                     </Link>
                                 </div>
-
                             </div>
                         </div>
+                    ))} */}
 
-                         <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
-                            <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
+                        <div className="space-y-10">
+                            {reviews.map((review, index) => (
+                                <div
+                                    key={index}
+                                    className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl"
+                                >
+                                    <p className="text-lg sm:text-xl md:text-2xl 2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">
+                                        {review.text}
+                                    </p>
 
-                            <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
-                            </div>
+                                    <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
+                                        <div className="image-here flex justify-center items-center gap-4 w-full md:w-auto">
+                                            <div
+                                                style={{ backgroundColor: review.bgColor }}
+                                                className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold rounded-full text-center flex items-center justify-center text-black"
+                                            >
+                                                {review.initials}
+                                            </div>
+                                            <div>
+                                                <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">
+                                                    {review.name}
+                                                </p>
+                                                <span className="flex mt-2 gap-1">
+                                                    {Array.from({ length: review.stars }).map((_, i) => (
+                                                        <FaStar key={i} className="text-amber-500" />
+                                                    ))}
+                                                </span>
+                                            </div>
+                                        </div>
 
-                            <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
-
-                                <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
-                                    <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
-                                    <div className=''>
-                                        <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
-                                        <span className='flex mt-2 gap-1'>
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                        </span>
+                                        <div className="user-data">
+                                            <Link
+                                                className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0"
+                                                href="/"
+                                            >
+                                                <Image
+                                                    className="md:w-full"
+                                                    src={review.img}
+                                                    width={100}
+                                                    height={50}
+                                                    alt="hot"
+                                                />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-
-
-                                <div className="user-data">
-                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
-                                        <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </Link>
-                                </div>
-
-                            </div>
+                            ))}
                         </div>
 
-                         <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
-                            <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
 
-                            <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
-                            </div>
-
-                            <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
-
-                                <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
-                                    <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
-                                    <div className=''>
-                                        <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
-                                        <span className='flex mt-2 gap-1'>
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                        </span>
-                                    </div>
-                                </div>
-
-
-                                <div className="user-data">
-                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
-                                        <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </Link>
-                                </div>
-
-                            </div>
-                        </div>
-
-                         <div className="single-review border border-[#535353] p-6 md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[65px] lg:rounded-[30px] rounded-2xl">
-                            <p className=" text-lg sm:text-xl md:text-2xl  2xl:text-4xl tracking-[0px] font-semibold text-white lg:!leading-[2.875rem] text-md xl:text-2xl">"Cubix managed to provide successful support and development in a timely manner. The app is still in preparation for the beta launch, but it has been receiving a lot of positive feedback from the client. The team provided excellent workflow and communication throughout the project."</p>
-
-                            <div className="flex justify-between md:items-center  items-start  flex-col sm:flex-row">
-                            </div>
-
-                            <div className="relative flex gap-4 items-center w-full pt-12 justify-between sm:w-auto">
-
-                                <div className='image-here flex justify-center items-center gap-4 w-full md:w-auto'>
-                                    <div id="profileImage" className="h-12 w-12 xl:h-[84px] md:h-20 xl:w-[84px] md:w-20 lg:text-3xl text-xl font-bold bg-[#2ED06E] rounded-full text-center flex items-center justify-center text-black">JD</div>
-                                    <div className=''>
-                                        <p className="font-bold text-white text-xs sm:text-sm lg:text-md xl:text-lg 2xl:text-xl">Jackie Dallas, Director</p>
-                                        <span className='flex mt-2 gap-1'>
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                            <FaStar className='text-amber-500' />
-                                        </span>
-                                    </div>
-                                </div>
-
-
-                                <div className="user-data">
-                                    <Link className="w-full md:w-[120px] flex justify-end mt-4 md:block md:mt-0" href="/">
-                                        <Image className="md:w-full" src={Img3} width={100} height={50} alt="hot" />
-                                    </Link>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

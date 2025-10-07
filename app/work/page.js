@@ -1,15 +1,27 @@
-import React from 'react'
+'use client'
+import Featured from '@/components/Featured/Featured'
+import Footer from '@/components/Footer/Footer'
+import Navbar from '@/components/Navbar/Navbar'
+import Sidepopup from '@/components/Sidepopup/Sidepopup'
 import { usePopup } from "@/context/PopupContext";
 
 
+import React from 'react'
 
-const Trigger = () => {
+export default function work () {
     const { openPopup, closePopup, isOpen } = usePopup();
 
     return (
         <div>
-            <section className="mt-14 start-project bg-white relative w-full lg:min-h-[80vh] z-50 flex items-center justify-center -top-[1px]">
-                <div className="pt-14 mx-auto reveal-text text-center max-w-7xl px-6 md:py-24 pb-14 lg:px-8">
+
+            <div data-theme="light">
+                <Navbar />
+            </div>
+
+            <Featured />
+
+             <section className="start-project bg-dark relative w-full lg:min-h-[80vh] z-50 flex items-center justify-center top-[0px]">
+                <div className="mx-auto reveal-text text-center max-w-7xl md:pb-24 pb-14 lg:px-8">
                     <p className="text-black mb-2 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Pull the Trigger!</p>
                     <div className="overflow-hidden">
                         <h2 className="text-black font-extrabold text-[43px] leading-none lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px] pb-2 2xl:pb-[11px]" style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0px)' }}>Let’s bring your <br className="min-[580px]:block hidden" /> vision to life.</h2>
@@ -24,8 +36,11 @@ const Trigger = () => {
                         </div>
                 </div>
             </section>
+
+
+            <Sidepopup/>
+            <Footer />
+
         </div>
     )
 }
-
-export default Trigger

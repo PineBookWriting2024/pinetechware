@@ -26,7 +26,7 @@ export default function Home() {
     const btn = btnRef.current;
     const rect = btn.getBoundingClientRect(); // button ki position
 
-    const maxMove = 200; // 👈 max move area (200-400px ke liye adjust karo)
+    const maxMove = 40; //  max move area (200-400px ke liye adjust karo)
 
     function handleMouseMove(e) {
       const x = e.clientX - (rect.left + rect.width / 2);
@@ -38,11 +38,11 @@ export default function Home() {
 
       // GSAP se smooth follow
       gsap.to(btn, {
-        x: limitedX * 1.4,
-        y: limitedY * 1.4,
+        x: limitedX * 1,
+        y: limitedY * 1,
         scale: 0.9, // 👈 hover me chhota ho jaye
-        duration: 0.4,
-        ease: "power3.out",
+        duration: 0.2,
+        ease: "power4.out",
       });
     }
 
@@ -51,7 +51,7 @@ export default function Home() {
       gsap.to(btn, {
         x: 0,
         y: 0,
-        scale: 1,
+        scale: 1.,
         duration: 0.6,
         ease: "elastic.out(1, 0.4)", // 👈 smooth elastic effect
       });
@@ -74,7 +74,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className="h-[90vh] bg-gradient-to-b from-gray-900 to-gray-600 text-white">
-        <section className="pt-[10%]">
+        <section className="md:pt-[10%] pt-[50%]">
           <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex-col justify-between items-center">
             {/* Left Side Content */}
             <h1 className=" font-extrabold text-white md:text-6xl leading-none text-[43px] lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px]">
@@ -85,15 +85,10 @@ export default function Home() {
             </p>
 
             {/* Right Side Circle */}
-            {/* <div className="bg-[#3BB9E1] rounded-full h-[150px] w-[150px] flex flex-col items-center justify-center text-white mt-8 cursor-pointer hover:shadow-lg hover:scale-105 transition-transform duration-300">
-              <MdArrowOutward className="text-black text-5xl mb-2" />
-              <b className="mb-0 font-bold mt-2 xl:leading-5 leading-4 text-center" >Let’s Discuss <br/> Your Idea</b>
-            </div> */}
-
-            <div className="ball text-right flex justify-end">
-              <div ref={btnRef} className="bg-[#3BB9E1] duration-100 hover:bg-[#fff] rounded-full h-[150px] w-[150px] flex flex-col items-center justify-center hover:text-black text-white mt-8 cursor-pointer shadow-md"
+            <div className="ball text-right  justify-end pr-12 pb-8 md:flex hidden">
+              <div ref={btnRef} className="bg-[#3BB9E1] duration-100 hover:bg-[#fff] scale-125 rounded-full h-[150px] w-[150px] flex flex-col items-center justify-center hover:text-black text-white mt-8 cursor-pointer shadow-md"
               >
-                <MdArrowOutward className="text-black text-5xl mb-2" />
+                <MdArrowOutward className="text-black text-5xl" />
                 <b className="mb-0 font-bold mt-2 xl:leading-5 leading-4 text-center">
                   Let’s Discuss <br /> Your Idea
                 </b>

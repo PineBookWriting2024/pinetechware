@@ -50,7 +50,7 @@ export default function Featured() {
                                 <h2 className="font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>Our Success Stories.</span></h2>
                             </div>
                             
-                            <Link className=" mt-6 text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-300 ease-in-out hover:font-semibold" href="/work/">
+                            <Link className=" mt-6 text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-300 ease-in-out hover:font-semibold" href="/work">
                                 More case studies
                                 <div className="transform group-hover:translate-x-2 transition-all duration-300 ease-in-out">
                                     {/* <Image src={Arrow} className="hidden group-hover:block w-5 lg:w-full" alt="link arrow" /> */}
@@ -76,12 +76,12 @@ export default function Featured() {
                                     </div>
                                 </div>
                                 <div className="max-w-full lg:max-w-xl">
-                                    <Link className="flex justify-between items-center pt-[20px] pb-[10px] cursor-pointer" href="#">
+                                    <Link className="flex justify-between items-center pt-[20px] pb-[10px] F" href="/">
                                         <div className="h-[58px] w-[151px] flex">
                                             <Image className="object-contain" src={Icon1} loading="lazy" alt="brand" /></div>
                                     </Link>
                                     <div className="group relative">
-                                        <Link className="group-hover:underline underline-offset-[9px] decoration-1" href="#">
+                                        <Link className="group-hover:underline underline-offset-[9px] decoration-1" href="/">
                                             <h3 className=" mb-[20px] font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">A Social Networking for Pets and Pet Owners</h3>
                                         </Link>
                                         <Link className=" text-black text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-500 ease-in-out hover:font-semibold" href="#">

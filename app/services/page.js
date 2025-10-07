@@ -1,5 +1,10 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 import { useState } from "react";
 import React from 'react'
 import Image from 'next/image'
@@ -10,10 +15,36 @@ import serMob from "@/public/images/serMob.jpg"
 import OurClients from "@/components/OurClients/OurClients";
 import Trigger from "@/components/Trigger/Trigger";
 import Footer from "@/components/Footer/Footer";
-
+import Sidepopup from "@/components/Sidepopup/Sidepopup";
 
 
 export default function services() {
+
+ useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // sab elements jinke paas ye class ho
+
+    const elements = gsap.utils.toArray(".reveal-text");
+
+    elements.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 80 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
 
 
     const [openIndex, setOpenIndex] = useState(1); // Default: 2nd (Audit & Consulting) open
@@ -51,11 +82,16 @@ export default function services() {
 
             <section className='service-module--heroGradient--bed34 hero relative overflow-x-hidden' data-theme="light">
                 <div className='min-h-screen flex justify-center items-center flex-col max-w-7xl mx-auto relative'>
-                    <div className='mx-auto w-full md:w-8/12 xl:w-3/5 2xl:w-5/6 px-4 lg:px-8'>
+                    <div className='reveal-text mx-auto w-full md:w-8/12 xl:w-3/5 2xl:w-5/6 px-4 lg:px-8'>
 
-                        <h1 className=" font-extrabold text-black leading-none text-[43px] lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px]"><span className="text-theme"> Business </span> through Accelerated Digital Services</h1>
-
-                        <p className=" text-black mt-5 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">Achieve business goals and meet user satisfaction by developing seamless and intuitive products.</p>
+                        <h1
+                            
+                            className="font-extrabold text-black leading-none text-[43px] lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px]"
+                        >
+                            <span className="text-theme">Business</span> through Accelerated Digital
+                            Services
+                        </h1>
+                        <p  className=" text-black mt-5 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">Achieve business goals and meet user satisfaction by developing seamless and intuitive products.</p>
 
                     </div>
                 </div>
@@ -71,7 +107,7 @@ export default function services() {
 
 
 
-            <section className="service-provided" id="mobile-services">
+            <section className="reveal-text service-provided" id="mobile-services">
                 <div className="px-6 lg:px-8 pt-14 md:pt-24 lg:py-[10.5rem] max-w-7xl mx-auto">
                     <div className="max-w-3xl xl:max-w-4xl">
                         <div className="lg:overflow-hidden">
@@ -79,7 +115,7 @@ export default function services() {
                     </div>
                     <div className="lg:grid lg:grid-cols-12 lg:gap-8 pt-10">
                         <div className="lg:col-span-5">
-                            <Image className="w-full fade-in lg:sticky lg:top-20" src={serMob} />
+                            <Image className="w-full fade-in lg:sticky lg:top-20" src={serMob} alt=""/>
                         </div>
 
 
@@ -172,35 +208,37 @@ export default function services() {
             </section>
 
 
-            <section className="teach-guarantees">
-                <div className="undefined px-6 lg:px-8 pb-14 md:pb-24 lg:pb-[10.5rem] max-w-7xl mx-auto">
+            <section className="reveal-text teach-guarantees">
+                <div className="px-6 lg:px-8 pb-14 md:pb-24 lg:pb-[10.5rem] max-w-7xl mx-auto">
                     <div className="2xl:max-w-4xl lg:max-w-3xl pb-12 lg:pb-20">
                         <div className="lg:overflow-hidden">
-                            <h2 className="font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span><span classname="!normal-case">teach</span> guarantees</span></h2></div>
+                            <h2 className="font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span><span className="!normal-case">teach</span> guarantees</span></h2></div>
                     </div>
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-9 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                            <article className=" cursor-auto group p-7 rounded-3xl border h-full border-[#CCCCCC]">
+                            <article className=" cursor-auto group xl:p-7 p-6 lg:rounded-[30px] rounded-2xl border border-[#CCCCCC] hover:border-[#3bb9e1] transition-colors duration-300">
                                 <a>
                                     <div className="flex flex-col h-full justify-between gap-y-16 lg:gap-y-20">
                                         <h3 className=" font-bold leading-[1.2] text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">High-Quality Practices</h3>
-                                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">High-quality practices in software development involve rigorous testing, adherence to standards, and continuous improvement, ensuring reliable, efficient, and robust solutions.</p>
+                                        <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">High-quality practices in software development involve rigorous testing, adherence to standards, and continuous improvement, ensuring reliable, efficient, and robust solutions.</p>
                                     </div>
                                 </a>
                             </article>
-                            <article className=" cursor-auto group p-7 rounded-3xl border h-full border-[#CCCCCC]">
+
+                            <article className=" cursor-auto group xl:p-7 p-6 lg:rounded-[30px] rounded-2xl border border-[#CCCCCC] hover:border-[#3bb9e1] transition-colors duration-300">
                                 <a>
                                     <div className="flex flex-col h-full justify-between gap-y-16 lg:gap-y-20">
                                         <h3 className=" font-bold leading-[1.2] text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Real-estate Software</h3>
-                                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Real-Estate software streamlines property management, sales, and client interactions, enhancing efficiency, organization, and profitability for real estate professionals.</p>
+                                        <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Real-Estate software streamlines property management, sales, and client interactions, enhancing efficiency, organization, and profitability for real estate professionals.</p>
                                     </div>
                                 </a>
                             </article>
-                            <article className=" cursor-auto group p-7 rounded-3xl border h-full border-[#CCCCCC]">
+                            
+                            <article className=" cursor-auto group xl:p-7 p-6 lg:rounded-[30px] rounded-2xl border border-[#CCCCCC] hover:border-[#3bb9e1] transition-colors duration-300">
                                 <a>
                                     <div className="flex flex-col h-full justify-between gap-y-16 lg:gap-y-20">
                                         <h3 className=" font-bold leading-[1.2] text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Strategic Partnerships</h3>
-                                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Strategic partnerships in software development drive innovation and growth by combining expertise, resources, and technologies to deliver superior solutions.</p>
+                                        <p className="text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Strategic partnerships in software development drive innovation and growth by combining expertise, resources, and technologies to deliver superior solutions.</p>
                                     </div>
                                 </a>
                             </article>
@@ -213,6 +251,8 @@ export default function services() {
             <OurClients />
 
             <Trigger />
+
+               <Sidepopup />
 
             <Footer />
         </div>

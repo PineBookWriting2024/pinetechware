@@ -27,6 +27,8 @@ import y1 from "@/public/images/y1.svg"
 import y2 from "@/public/images/y2.svg"
 import y3 from "@/public/images/y3.svg"
 import Elvina from "@/public/images/elvina.webp"
+import SeoHead from "@/components/SeoHead";
+
 
 
 
@@ -34,6 +36,12 @@ import React from 'react'
 import Tech from '@/components/Tech/Tech'
 import { Link } from 'lucide-react'
 import Trigger from '@/components/Trigger/Trigger'
+import Head from 'next/head'
+
+// export const metadata = {
+//   title: "About Us",
+//   description: "Learn more about our team and company mission.",
+// };
 
 export default function about() {
   const [activeTab, setActiveTab] = useState("tab1"); // 👈 by default Tab1 active
@@ -66,18 +74,23 @@ export default function about() {
 
   return (
     <div>
+      <SeoHead
+        title="About Pine Techware | Global Software & Innovation"
+        description="Pine Techware - A global tech partner building software & digital products. From startups to enterprises, we empower businesses with innovation & growth."
+      />      
       <Navbar />
 
-      <section className="bg-white"  data-theme="light">
+      <section className="bg-white" data-theme="light">
         <div className="container px-6 lg:px-8 pt-40 lg:pt-[10.5rem] max-w-7xl mx-auto">
           <div className="max-w-3xl xl:max-w-4xl">
             <div className="lg:overflow-hidden">
               <h2 className="font-bold pb-1 md:pb-0 text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-                <span>Brilliant Tech Minds, Together! </span>
+                <span>Innovators + Technologists + Your Growth Partners</span>
               </h2>
             </div>
             <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-              We are a team of visionary leaders and problem-solvers utilizing our agile processes to build solutions for lasting value.
+              We’re Pine Techware - A global software & digital solutions company dedicated to crafting smart tech that scales. From ideation to delivery (and everything in between), we're here to turn ambitious ideas into lasting impact.
+
             </p>
           </div>
 
@@ -91,12 +104,11 @@ export default function about() {
           <div className="max-w-3xl xl:max-w-4xl">
             <div className="lg:overflow-hidden">
               <h2 className="font-bold pb-1 md:pb-0 text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-                <span>building software for global leaders</span>
+                <span>Building Tomorrow’s Digital Experiences</span>
               </h2>
             </div>
             <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-              Since 2008, Cubix has been setting new quality benchmarks every year. We equip you with solutions that create impact with purpose while generating business value. Let’s work together to build your next success story.
-
+              Since 2020, Pine Techware has been setting the bar high in innovation, engineering excellence, and design quality. We deliver solutions that not only look good but perform powerfully, delight users, and drive real business growth.
             </p>
           </div>
         </div>
@@ -179,14 +191,14 @@ export default function about() {
           <div className="max-w-3xl xl:max-w-4xl">
             <div className="lg:overflow-hidden">
               <h2 className="font-bold pb-1 md:pb-0 text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-                <span>Technologies we use </span>
+                <span>Our Vision for the Future</span>
               </h2>
             </div>
-            <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
+            {/* <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
               Hire from our pool of 350+ specialized experts in web, mobile, and
               software engineering, specializing in the latest technologies and
               frameworks, ready to scale your development teams effortlessly.
-            </p>
+            </p> */}
 
             <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
               {/* Left Tabs */}
@@ -196,31 +208,31 @@ export default function about() {
                     onClick={() => setActiveTab("tab1")}
                     className={`cursor-pointer md:w-full md:rounded-full md:px-3 font-medium text-left ${activeTab === "tab1" ? "text-black font-bold" : "text-gray-500 hover:text-black"}`}
                   >
-                    Tab 1
+                    Innovation
                   </li>
                   <li
                     onClick={() => setActiveTab("tab2")}
                     className={`cursor-pointer md:w-full md:rounded-full md:px-3 font-medium text-left ${activeTab === "tab2" ? "text-black font-bold" : "text-gray-500 hover:text-black"}`}
                   >
-                    Tab 2
+                    Excellence
                   </li>
                   <li
                     onClick={() => setActiveTab("tab3")}
                     className={`cursor-pointer md:w-full md:rounded-full md:px-3 font-medium text-left ${activeTab === "tab3" ? "text-black font-bold" : "text-gray-500 hover:text-black"}`}
                   >
-                    Tab 3
+                    People First 
                   </li>
                   <li
                     onClick={() => setActiveTab("tab4")}
                     className={`cursor-pointer md:w-full md:rounded-full md:px-3 font-medium text-left ${activeTab === "tab4" ? "text-black font-bold" : "text-gray-500 hover:text-black"}`}
                   >
-                    Tab 4
+                    Honesty
                   </li>
                   <li
                     onClick={() => setActiveTab("tab5")}
                     className={`cursor-pointer md:w-full md:rounded-full md:px-3 font-medium text-left ${activeTab === "tab5" ? "text-black font-bold" : "text-gray-500 hover:text-black"}`}
                   >
-                    Tab 5
+                    Integrity
                   </li>
                 </ul>
               </div>
@@ -231,20 +243,16 @@ export default function about() {
                 {activeTab === "tab1" && (
                   <div className='pt-8 w-full mt-5 md:ps-12'>
                     <div className=''>
-                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Igniting Ideas That Inspire</h3>
+                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Innovation Starts with Imagination</h3>
 
-                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At our company, we are driven by a passion for creativity, constantly seeking fresh ideas.</p>
+                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At Pine Techware, creativity isn’t just what we do, it’s who we are. We thrive on fresh ideas, bold imagination, and the thrill of turning visionary concepts into real-world solutions.</p>
 
                       <div className="flex flex-col gap-5">
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Imagination and the thrill of bringing new-age ideas to reality set our team.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our culture is built on curiosity, experimentation, and the courage to push boundaries. This spirit empowers us to design innovative products that not only transform industries but also exceed expectations.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">It is a culture of inquisitiveness, experimentation and the courage to breach frontiers.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">For us, creativity is more than a skill; it’s a mindset. It drives us to see possibilities where others see limits, and it fuels our passion to shape a future filled with opportunity.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our creative mindset helps us conceive innovative products that change the dynamics of industries and exceed expected levels.</p>
-
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, creativity is a skillset, an outlook on life that steers us toward a future filled with possibilities.</p>
-
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Amazing outcomes emerge when our talented team collaborates with passion and purpose.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">When our talented team collaborates with purpose and passion, extraordinary things happen, and the results speak for themselves.</p>
 
                       </div>
                     </div>
@@ -254,20 +262,20 @@ export default function about() {
                 {activeTab === "tab2" && (
                   <div className='pt-8 w-full mt-5 md:ps-12'>
                     <div className=''>
-                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Igniting Ideas That Inspire 2</h3>
+                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Relentless Quality</h3>
 
-                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At our company, we are driven by a passion for creativity, constantly seeking fresh ideas.</p>
+                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Excellence is more than a goal here, it’s a way of working, thinking, and delivering. We pursue perfection in every detail, ensuring quality that speaks for itself.</p>
 
                       <div className="flex flex-col gap-5">
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Imagination and the thrill of bringing new-age ideas to reality set our team.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our teams are driven by high standards, precision, and a relentless commitment to outperform expectations at every stage of the process.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">It is a culture of inquisitiveness, experimentation and the courage to breach frontiers.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We believe excellence is achieved through consistency, discipline, and a continuous drive to improve and innovate.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our creative mindset helps us conceive innovative products that change the dynamics of industries and exceed expected levels.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">From ideation to execution, we refine, test, and perfect every product until it stands out as the best in its class.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, creativity is a skillset, an outlook on life that steers us toward a future filled with possibilities.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, excellence is not just about results; it’s about the mindset that pushes boundaries and inspires greatness in everything we do.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Amazing outcomes emerge when our talented team collaborates with passion and purpose.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Through dedication and passion, we turn ordinary efforts into extraordinary achievements.</p>
 
                       </div>
                     </div>
@@ -277,20 +285,20 @@ export default function about() {
                 {activeTab === "tab3" && (
                   <div className='pt-8 w-full mt-5 md:ps-12'>
                     <div className=''>
-                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Igniting Ideas That Inspire 3</h3>
+                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Bringing People Together</h3>
 
-                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At our company, we are driven by a passion for creativity, constantly seeking fresh ideas.</p>
+                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At our company, people are at the heart of everything we do. We believe that empowered individuals create extraordinary outcomes.</p>
 
                       <div className="flex flex-col gap-5">
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Imagination and the thrill of bringing new-age ideas to reality set our team.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our culture thrives on respect, collaboration, and shared growth, where every voice matters and every idea is valued.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">It is a culture of inquisitiveness, experimentation and the courage to breach frontiers.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We foster an environment that encourages learning, well-being, and balance — ensuring our teams feel inspired and supported in all they do.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our creative mindset helps us conceive innovative products that change the dynamics of industries and exceed expected levels.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Trust, empathy, and open communication define our relationships, both within our teams and with our clients.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, creativity is a skillset, an outlook on life that steers us toward a future filled with possibilities.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, putting people first means nurturing potential, recognizing achievements, and building a workplace where everyone can thrive.</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Amazing outcomes emerge when our talented team collaborates with passion and purpose.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Together, we grow stronger, driven by unity, purpose, and the belief that success begins with our people.</p>
 
                       </div>
                     </div>
@@ -300,20 +308,26 @@ export default function about() {
                 {activeTab === "tab4" && (
                   <div className='pt-8 w-full mt-5 md:ps-12'>
                     <div className=''>
-                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Igniting Ideas That Inspire 4</h3>
+                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Transparent Partnership </h3>
 
-                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At our company, we are driven by a passion for creativity, constantly seeking fresh ideas.</p>
+                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Transparency is more than a principle at Pine Techware; it’s the foundation of how we work and grow together. We believe openness builds trust, fuels collaboration, and sparks innovation.
+</p>
 
                       <div className="flex flex-col gap-5">
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Imagination and the thrill of bringing new-age ideas to reality set our team.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our approach is rooted in complete transparency; from project discussions to delivery milestones, ensuring our clients are always informed and confident in every decision.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">It is a culture of inquisitiveness, experimentation and the courage to breach frontiers.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We value accountability and sincerity, standing by our words and actions to create meaningful, long-term collaborations.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our creative mindset helps us conceive innovative products that change the dynamics of industries and exceed expected levels.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">By embracing openness, we eliminate barriers, encourage genuine dialogue, and foster mutual respect across every level of engagement.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, creativity is a skillset, an outlook on life that steers us toward a future filled with possibilities.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, honesty and transparency are not just principles; they are promises that guide how we work, connect, and grow with our partners.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Amazing outcomes emerge when our talented team collaborates with passion and purpose.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Together, we build partnerships defined by clarity, trust, and shared success.
+</p>
 
                       </div>
                     </div>
@@ -323,20 +337,27 @@ export default function about() {
                 {activeTab === "tab5" && (
                   <div className='pt-8 w-full mt-5 md:ps-12'>
                     <div className=''>
-                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Igniting Ideas That Inspire 5</h3>
+                      <h3 className="  mb-4 font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Ethics that Inspire Trust
+</h3>
 
-                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At our company, we are driven by a passion for creativity, constantly seeking fresh ideas.</p>
+                      <p className="mb-3 lg:mb-8 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At this agency, integrity is the foundation of everything we do. We uphold the highest ethical standards, ensuring that our actions consistently align with our values and commitments.
+</p>
 
                       <div className="flex flex-col gap-5">
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Imagination and the thrill of bringing new-age ideas to reality set our team.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We believe that true success is built on honesty, responsibility, and doing what’s right — even when no one is watching.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">It is a culture of inquisitiveness, experimentation and the courage to breach frontiers.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our teams operate with fairness, respect, and accountability, fostering confidence among our clients, partners, and colleagues alike.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our creative mindset helps us conceive innovative products that change the dynamics of industries and exceed expected levels.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Every decision we make reflects our dedication to transparency and moral responsibility, shaping relationships rooted in trust and credibility.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, creativity is a skillset, an outlook on life that steers us toward a future filled with possibilities.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">To us, integrity is more than a principle — it’s a promise to act with sincerity, honor our word, and inspire confidence through ethical excellence.
+</p>
 
-                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Amazing outcomes emerge when our talented team collaborates with passion and purpose.</p>
+                        <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Through unwavering integrity, we strengthen our reputation and create a legacy of trust and respect.
+</p>
 
                       </div>
                     </div>
@@ -353,12 +374,12 @@ export default function about() {
 
       <section className="mx-auto max-w-7xl lg:px-8 px-6 md:mt-24 lg:mt-[10.5rem] mt-14">
         <figure className="bg-gradient-to-r from-[#050505] to-[#201F21] text-white lg:rounded-[30px] rounded-2xl lg:p-[4.5rem] p-8">
-          <h3 className=" font-bold lg:max-w-4xl text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Great Things Happen when Our Talented Teams Work Together to Achieve your Goals. at Cubix, We Focus on Solving Real Business Problems Because That’s Where True Value Lies.</h3>
+          <h3 className=" font-bold lg:max-w-4xl text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">“Success isn’t just about building great products; it’s about creating meaningful impact. At Pine Techware, our goal is to turn vision into value and challenges into opportunities.”</h3>
           <figcaption className="lg:mt-12 mt-6 flex items-center gap-x-4">
             <Image alt="" src={CEO} width="64" height="64" className="h-16 w-16 rounded-full" />
             <div className="flex flex-col">
               <p className=" font-medium text-sm lg:text-md xl:text-lg 2xl:text-xl">Salman Lakhani</p>
-              <p className=" text-[#6F6F6F] text-sm lg:text-md xl:text-lg 2xl:text-xl">CEO, Cubix inc.</p>
+              <p className=" text-[#6F6F6F] text-sm lg:text-md xl:text-lg 2xl:text-xl">CEO, Pine Techware Inc.</p>
             </div>
           </figcaption>
         </figure>
@@ -369,7 +390,7 @@ export default function about() {
         <div className="px-6 lg:px-8 max-w-7xl mx-auto pt-14 md:pt-24 lg:pt-[10.5rem]">
           <div className="2xl:max-w-4xl lg:max-w-3xl">
             <div className="lg:overflow-hidden">
-              <h2 className="pb-1 font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>clients we’re proud to have worked with</span></h2></div>
+              <h2 className="pb-1 font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>Brands Who Believe in Us</span></h2></div>
           </div>
         </div>
       </section>
@@ -431,7 +452,7 @@ export default function about() {
           <div className='lg:grid lg:grid-cols-12'>
             <div className='lg:col-span-7 xl:pr-4'>
               <div className='lg:overflow-hidden'>
-                <h2 className=" undefined font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>our people and culture</span></h2>
+                <h2 className=" undefined font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>Life At Pine Techware - Our People & Culture</span></h2>
               </div>
             </div>
           </div>
@@ -448,7 +469,7 @@ export default function about() {
         <div className="undefined px-6 lg:px-8 max-w-7xl mx-auto pt-14 md:pt-24 lg:pt-[10.5rem]">
           <div className="2xl:max-w-4xl lg:max-w-3xl">
             <div className="lg:overflow-hidden">
-              <h2 className="pb-1 font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>global awards and recognitions</span></h2>
+              <h2 className="pb-1 font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>Our Award-Winning Journey</span></h2>
             </div>
           </div>
         </div>
@@ -509,10 +530,7 @@ export default function about() {
         <div className="undefined px-6 lg:px-8 max-w-7xl mx-auto py-14 md:py-24 lg:py-[10.5rem]">
           <div className="lg:overflow-hidden">
             <h2 className="undefined text-white font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-              <span>we partner with the </span>
-              <br className="invisible md:visible" />
-              <span>
-                <span className="!normal-case">world’s</span> technology leaders</span>
+              <span>Trusted Partnerships with Industry Giants </span>
             </h2>
           </div>
 
@@ -614,31 +632,31 @@ export default function about() {
       <section className="gameDev-sec bg-black text-white py-14 md:py-24 lg:py-[10.5rem]">
         <div className="px-6 lg:px-8 max-w-7xl mx-auto" >
           <div className="lg:overflow-hidden" >
-            <h2 className="font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>what we </span><span className="text-theme"><span>believe</span></span><span> in</span></h2></div>
+            <h2 className="font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>The Values That Shape Us</span></h2></div>
           <div className="mx-auto mt-12 lg:mt-20 grid max-w-2xl grid-cols-1 md:gap-20 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3" >
             <div className="mb-10 md:mb-0" >
-              <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Customer Focus</h3>
-              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We put our clients at the center to build trust and build innovative software that exceeds expectations.</p>
+              <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Client-Centricity</h3>
+              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We put our clients at the heart of everything we do—building trust and delivering innovative solutions that consistently exceed expectations.</p>
             </div>
             <div className="mb-10 md:mb-0" >
               <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Integrity</h3>
-              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our teams embody integrity at all levels, serving as role models and ambassadors of our valued principles.</p>
+              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Integrity defines us. Our teams lead by example, upholding principles that shape lasting relationships and genuine partnerships.</p>
             </div>
             <div className="mb-10 md:mb-0" >
               <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Innovation</h3>
-              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We utilize the latest technologies to build what’s next and ensure rapid delivery to help you always be first to market.</p>
+              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We embrace the latest technologies to create what’s next, ensuring rapid delivery and helping you stay ahead of the market.</p>
             </div>
             <div className="mb-10 md:mb-0" >
-              <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Quality</h3>
-              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">From custom software to mobile apps, we are committed to delivering excellence in everything we build for you.</p>
+              <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Excellence</h3>
+              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Excellence is our standard. From custom software to mobile apps, we build with precision, passion, and uncompromising quality.</p>
             </div>
             <div className="mb-10 md:mb-0" >
               <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Transparency</h3>
-              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">While we move your project forward, we ensure you never lose control of its outcomes by keeping you updated.</p>
+              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We keep you informed at every step, ensuring full visibility and control as your project moves forward.</p>
             </div>
             <div className="mb-10 md:mb-0" >
-              <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Collaboration</h3>
-              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Our teams work, learn, succeed, grow, and develop exceptional solutions for your business – together.</p>
+              <h3 className=" font-bold pb-4 lg:pb-8 text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">Teamwork</h3>
+              <p className="undefined text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">Together, we achieve more. Our teams work, learn, and grow alongside you to craft exceptional solutions that drive success.</p>
             </div>
           </div>
         </div>
@@ -650,8 +668,8 @@ export default function about() {
         <div className="px-6 lg:px-8 max-w-7xl mx-auto py-14 md:py-24 lg:py-[10.5rem]">
           <div className="2xl:max-w-4xl lg:max-w-3xl">
             <div className="lg:overflow-hidden">
-              <h2 className="pb-1 font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>behind the scenes, our management</span></h2>
-              <p className="undefined text-black lg:pe-[5rem] pt-6 lg:pt-[2.375rem] text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">At Cubix, our leadership extends beyond business, aiming to positively impact our clients and communities through innovation and responsible practices.</p></div>
+              <h2 className="pb-1 font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]"><span>Meet the Team Behind Pine Techware</span></h2>
+              <p className="undefined text-black lg:pe-[5rem] pt-6 lg:pt-[2.375rem] text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">We’re more than developers; we’re creators, strategists, designers, and problem solvers. Driven by passion and empowered by values, our team works hand in hand with you to bring visions to life and build products that matter.</p></div>
           </div>
 
           <div className="px-6 lg:px-8 max-w-7xl mx-auto my-8 lg:my-20">
@@ -794,7 +812,13 @@ export default function about() {
       </div>
 
 
-      <Trigger />
+      {/* <Trigger /> */}
+
+       <Trigger 
+                title="Create Without Limits!" 
+                description="The future of your product starts here."
+                buttonText="Start Your Project"
+            />
 
 
       <Footer />

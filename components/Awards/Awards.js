@@ -52,13 +52,11 @@ export default function Awards() {
           <div className="max-w-3xl xl:max-w-4xl">
             <div className="lg:overflow-hidden">
               <h2 className="font-bold pb-1 md:pb-0 text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px] text-white">
-                Our awards and <br />
-                <span className="text-[#3bb9e1]"> recognitions</span>
+                Award-Winning  <br />
+                <span className="text-[#3bb9e1]"> Software Development Company</span>
               </h2>
               <p className="text-white lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-                Recognized globally for our industry-leading development expertise
-                and innovative solutions. Creating innovative, user-friendly, and
-                life-changing products is what we do!
+                We are recognized globally for our high-quality and innovative solutions that transform products for businesses.
               </p>
             </div>
           </div>

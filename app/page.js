@@ -18,6 +18,10 @@ import Highlights from "@/components/Highlights/Highlights";
 import { useRef, useEffect } from "react";  // 👈 ye add karo
 import { gsap } from "gsap"; // 👈 ye add karo
 import Head from "next/head";
+import SeoHead from "@/components/SeoHead";
+
+
+
 
 export default function Home() {
   const btnRef = useRef(null);
@@ -68,20 +72,21 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        {/* <title>Home - My Software Company</title>
-        <meta name="description" content="We build software solutions..." /> */}
-      </Head>
+    <SeoHead
+        title="Custom Software & Digital Solutions | Pine Techware"
+        description="PineTechware offers expert website design, development, and digital solutions to help businesses grow through innovation and technology."
+      />
+
       <Navbar />
       <main className="h-[90vh] bg-gradient-to-b from-gray-900 to-gray-600 text-white">
         <section className="md:pt-[10%] pt-[50%]">
           <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex-col justify-between items-center">
             {/* Left Side Content */}
-            <h1 className=" font-extrabold text-white md:text-6xl leading-none text-[43px] lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px]">
-              We are a <span className="text-[#3BB9E1] ">Software</span> <span className="text-[#3BB9E1] block"> Development</span> Company
+            <h1 className="font-extrabold text-white md:text-5xl leading-none text-[43px] lg:text-5xl xl:text-6xl 2xl:text-7xl">
+              <span className="text-[#3BB9E1] ">USA’s #1</span> Software Development Company<br/> That Transforms Brands
             </h1>
             <p className=" text-neutral-200 mt-5 lg:max-w-xl 2xl:max-w-3xl text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-              We are your trusted development partner with just one goal in focus to build products that generate a lasting, profitable impact.
+              Pine Techware is a full-cycle software development service bringing your vision to life through tech, design & innovation. Let’s make something remarkable.
             </p>
 
             {/* Right Side Circle */}

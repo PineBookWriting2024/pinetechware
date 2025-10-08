@@ -82,14 +82,13 @@ const OurClients = () => {
                 <div className="px-6 lg:px-8 max-w-7xl mx-auto my-14 md:my-24">
                     <div className="mx-auto max-w-[1200px] sm:px-6 lg:px-8 text-center relative z-10">
                         <h2 className="font-bold text-white lg:pb-[2.375rem] pb-6 sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-                            <span>our clients simply love </span>
+                            <span>Our Clients Trust Us And </span>
                             <span className={styles.textTheme}>
-                                <span>what we do</span>
+                                <span>Show Immense Satisfaction</span>
                             </span>
                         </h2>
                         <p className="text-white text-lg md:text-xl 2xl:text-2xl max-w-3xl mx-auto">
-                            We have had the privilege of working with a diverse range of clients across
-                            various industries. Here are some of the companies we have collaborated with:
+                            Pine Techware is trusted by industry leaders and many new startups that experience on-time delivery at this product development company.
                         </p>
 
 

@@ -11,6 +11,7 @@ const Technologies = () => {
       sections: [
         {
           title: "React",
+          // icon: [<FaReact />, <FaReact />, <FaReact />, <FaReact />, <FaReact />],
           items: ["React.js", "Angular", "Vue.js", "Node.js", "Django"],
         },
       ],
@@ -71,13 +72,11 @@ const Technologies = () => {
           <div className="max-w-3xl xl:max-w-4xl">
             <div className="lg:overflow-hidden">
               <h2 className="font-bold pb-1 md:pb-0 text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-                <span>Technologies we use </span>
+                <span>Technologies & Tools We Use That Create An Impact</span>
               </h2>
             </div>
             <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-              Hire from our pool of 350+ specialized experts in web, mobile, and
-              software engineering, specializing in the latest technologies and
-              frameworks, ready to scale your development teams effortlessly.
+             We’re fluent in:
             </p>
 
             <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
@@ -114,7 +113,8 @@ const Technologies = () => {
                         >
                           <span className="pb-[3px] md:pb-1.5">{item}</span>
                           <span className="pb-[3px] md:pb-1.5">{item}</span>
-                          <FaReact />
+                          {/* <icon>{section.icon}</icon> */}
+                          
                         </li>
                       ))}
                     </ul>

@@ -14,7 +14,7 @@ export default function Cta() {
                 <div className="px-6 lg:px-8 max-w-7xl mx-auto my-14 md:my-24">
                     <div className="flex flex-col justify-between gap-x-8 gap-y-4 bg-gradient-to-r from-[#f6f6f6b3] to-[#dfe2e659] p-4 md:p-6 md:flex-row md:items-center lg:pl-11 lg:pr-8 rounded-2xl md:rounded-full border">
                         <h4 className="text-black font-bold text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px] md:w-[70%] lg:w-[75%] xl:w-[80%]">
-                            Create a software development <span className="text-theme">Team</span> with us.
+                            Create An Impactful <span className="text-theme">Product</span> With Us.
                         </h4>
                         <div className="flex">
                             <button
